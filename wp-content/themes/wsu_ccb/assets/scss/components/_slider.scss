@@ -1,0 +1,134 @@
+.mainSwiper {
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  .swiper-button-prev {
+    &:after {
+      content: "";
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='15' viewBox='0 0 8 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.5 1L1 7.5L7.5 14' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 15px;
+    }
+  }
+
+  .swiper-button-next {
+    &:after {
+      content: "";
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='15' viewBox='0 0 8 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 14L7.5 7.5L1 0.999999' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 15px;
+    }
+  }
+
+  .swiper-slide {
+    width: auto;
+    height: auto;
+
+    .swiper-container {
+      position: relative;
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 18.75%, #000000 116.93%);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-height: 375px;
+
+        @include media-breakpoint-down(md) {
+          max-height: 210px;
+        }
+      }
+
+      .flex-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        color: $white;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 12px 40px 12px 12px;
+
+        @include media-breakpoint-down(md) {
+          bottom: 20px;
+          left: 20px;
+          font-size: 12px;
+          line-height: 15px;
+          padding: 12px;
+        }
+
+        a {
+          color: $white;
+        }
+      }
+
+      .slide-number {
+        position: absolute;
+        bottom: 12px;
+        color: $white;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        right: 17px;
+        @include media-breakpoint-down(xl) {
+          right: 10px;
+          font-size: 13px;
+          bottom: 28px;
+        }
+        @include media-breakpoint-down(lg) {
+          right: 20px;
+          bottom: 12px;
+        }
+        @include media-breakpoint-down(md) {
+          bottom: 0;
+          top: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+.thumbSwiper {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  .swiper-slide {
+    //width: 100px;
+    //height: 100px;
+    text-align: center;
+    overflow: hidden;
+    opacity: .1;
+    max-width: 114px;
+    max-height: 79px;
+    width: 100% !important;
+    margin-right: 1px !important;
+
+    @include media-breakpoint-down(md) {
+      max-width: 129px;
+      max-height: 89px;
+    }
+
+    &-thumb-active {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.featured-faculty-section{
+    @include media-breakpoint-up(lg) {
+    background-color: $grey;
+    }
+    .faculty-wrap{
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @include media-breakpoint-up(lg) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 0;
+    }
+        .events-bg{
+            display: none;
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                z-index: -1;
+                width: 870px;
+                height: 765px;
+                left: -22%;
+                bottom: 15px;  
+                display: block;
+            }
+    
+            @include media-breakpoint-up(xxl) {
+                left: -8%;
+            }
+        } 
+        .featured-faculty{
+            display: flex;
+            @include media-breakpoint-up(lg) {
+                display: block;
+            }
+            img{
+                max-width: 179px;
+                @include media-breakpoint-up(lg) {
+                max-width: 285px;
+                }
+            }
+            &--copy{
+                padding: 15px;
+                width: 100%;
+                background-color: $red;
+                color: $white;
+                @include media-breakpoint-up(lg) {
+                text-align: center;
+                max-width: 285px;
+                }
+            }
+            &--name{
+                font-weight: 600;
+                margin-bottom: 10px;
+                font-size: 0.875em;
+                @include media-breakpoint-up(lg) {
+
+                   font-size: 1.125em;
+
+                }
+
+            }
+            &--position{
+                font-size: 0.875em;
+
+            }
+            a{
+                &:hover{
+                    color: $white;
+                }
+            }
+ 
+        }  
+        .faculty{
+            display: flex;
+            margin-bottom: 11px;
+            background-color: #DDDDDD;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 25px;
+            }
+            &--copy{
+                padding: 25px;
+                width: 100%;
+
+            }
+            &--name{
+                font-weight: 600;
+                font-size: 0.875em;
+                margin-bottom: 0px;
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.125em;
+                }
+
+            }
+            &--position{
+                font-size: 0.875em;
+                color: $btn-grey2;
+            }
+        }
+        h3{
+            color: $red;
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+        h2{
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+    }
+.featured-link{
+    &:hover{
+        color: $white;
+    }
+}
+    
+
+}

@@ -1,0 +1,69 @@
+.accordion-section{
+  background-color: $grey;
+  padding-bottom: 80px;
+  padding-top: 60px;
+   // z-index: -2;
+    .accordion-wrap{
+        .events-bg{
+            display: none;
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                z-index: -1;
+                width: 997px;
+                height: 1194px;
+                right: 0;
+                bottom: -245px;  
+                display: block;
+            }
+            @include media-breakpoint-up(xxl) {
+                left: -8%;
+            }
+        } 
+    .accordion-containers{
+        .accordion{
+            --bs-accordion-active-color: $black;
+            .accordion-item{
+                background-color: $grey;
+                border: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 1;
+                .accordion-header{
+                    .accordion-button{
+                        background-color: $white;
+                        line-height: 18px;
+                        font-weight: 600;
+                        border: 1px solid #B0B0B0;
+                        font-size: 14px;
+                        @include media-breakpoint-up(md){
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                        img{
+                            padding-right: 10px;
+                            max-width: 50px;
+                            
+                        }
+                        &:after{
+                            font-family: "FontAwesome";
+                            content: "\f078";
+                            text-align: center;
+                            background-image: none;
+                            border-radius: 50%;
+                            color: $dark-red;
+                            position: absolute;
+                            right: 10px;
+                            font-size: 0.825em;
+                            padding-top: 3px;
+                            height: 26px;
+                            width: 26px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+}

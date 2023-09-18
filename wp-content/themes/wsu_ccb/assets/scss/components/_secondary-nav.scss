@@ -1,0 +1,101 @@
+.secondary-nav-section{
+    background-color: $grey;
+    a{
+        text-transform: uppercase;
+        color: $dark-red;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 40px;
+            padding-bottom: 35px;
+        }
+    }
+    .desktop{
+        display: none;
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+    }
+}
+.department-info-section{
+    .desktop{
+        display: none;
+        background-color: $dark-red;
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+        &:after{
+            content: "";
+            background: $dark-red;
+            position: absolute;
+            right: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h2{
+        padding-top: 0;
+    }
+    .dept-info{
+        position: relative;
+        padding-top: 35px;
+        padding-left: 35px;
+        p,a{
+            color: $white;
+            display: block;
+        }
+        .title{
+            font-weight: bold;
+
+        }
+
+    }
+    &--mobile{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .dept-info--wrap{
+            font-size: 0.875em;
+            background-color: $dark-red;
+            color: $white;
+            padding: 18px 53px 23px 23px;
+            p,a{
+                color: $white;
+                display: block;
+            }
+            .title{
+                font-weight: 600;
+                
+            }
+        }
+        .secondary{
+            .subnav-item{
+                background-color: $grey;
+                padding:15px;
+                margin-bottom: 5px;
+                position: relative;
+                a{
+                    color: $dark-red;
+                    text-transform: uppercase;
+                    color: $dark-red;
+                    font-weight: bold;
+                    display: block;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:after{
+                    content: "";
+                    background: $grey;
+                    position: absolute;
+                    right: -100%;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

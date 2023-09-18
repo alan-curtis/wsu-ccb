@@ -1,0 +1,113 @@
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.modal-body {
+position:relative;
+padding:0px;
+}
+.btn-close {
+position:absolute;
+right:-30px;
+top:0;
+}
+.video-modal-section{
+        margin-top: 40px;
+        margin-bottom: 50px;
+        @include media-breakpoint-up(md) { 
+            margin-top: 60px;
+            margin-bottom: 90px;
+        }
+     .video-wrap{
+        .title{
+            border-bottom: 1px solid #B0B0B0;
+        }
+        .number{
+            border: 1px solid $black-30;
+            border-radius: 50%;
+            font-size: 2.25em;
+            text-align: center;
+            margin-top: 20px;
+            color: $red;
+            font-weight: bold;
+            @include media-breakpoint-up(md) {
+            font-size: 3.75em;
+            }
+        }
+        .vid-container{
+            border-bottom: 1px solid #B0B0B0;
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        
+        i{
+            font-family: 'FontAwesome';
+            font-size: 0.625em;
+            color: $btn-grey2;
+            vertical-align: middle;
+        }
+        .duration{
+            font-size: 0.875em;
+            color: $btn-grey2;
+        }
+        .section-title{
+            font-weight: 600;
+            font-size: 1.125em;
+            margin-bottom: 0;
+        }
+        a{
+            margin: 0;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $dark-red;
+        display: inline-block;
+        &:after {
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.36384 4.65179C5.42336 4.71131 5.45312 4.77976 5.45312 4.85714C5.45312 4.93452 5.42336 5.00298 5.36384 5.0625L1.20312 9.22321C1.1436 9.28274 1.07515 9.3125 0.997768 9.3125C0.920387 9.3125 0.851935 9.28274 0.792411 9.22321L0.345982 8.77679C0.286458 8.71726 0.256696 8.64881 0.256696 8.57143C0.256696 8.49405 0.286458 8.4256 0.345982 8.36607L3.85491 4.85714L0.345982 1.34821C0.286458 1.28869 0.256696 1.22024 0.256696 1.14286C0.256696 1.06548 0.286458 0.997023 0.345982 0.9375L0.792411 0.491071C0.851935 0.431547 0.920387 0.401785 0.997768 0.401785C1.07515 0.401785 1.1436 0.431547 1.20312 0.491071L5.36384 4.65179Z' fill='%23CA1237'/%3E%3C/svg%3E%0A");
+            content: "";
+            background-repeat: no-repeat;
+            width: 6px;
+            height: 10px;
+            display: inline-block;
+            margin-left: 8px;
+        }
+        }
+        .red-btn{
+        
+                color: $white;
+                background-color: $red;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 14px;
+                position: relative;
+                transition: transform ease 0.5s;
+                min-width: 140px;
+                padding: 16px;
+                min-height: 66px;
+                margin: 10px 0;
+                border-radius: 0;
+                text-align: center;
+                @include media-breakpoint-up(md) { 
+                    font-size: 1em;
+                    min-height: 52px;
+                    position: relative;
+                    margin: 20px 0;
+                    padding: 16px 22px;
+                }
+                &:hover{
+                    background-color: $red;
+                    box-shadow: 0px 4px 20px rgba(202, 18, 55, 0.75);
+                    transform: translate(0, -5px);
+                    text-decoration: none;
+            }
+            }
+            &:last-child{
+                
+                border-bottom: none;
+                
+            }
+        }
+    }
+}

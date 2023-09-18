@@ -1,0 +1,340 @@
+html body div.wprm-wrapper {
+  position: fixed;
+  top: 0;
+  overflow: unset;
+  width: 100%;
+}
+
+.wprm-wrapper {
+  #wprmenu_bar {
+    position: relative;
+  }
+}
+
+#mg-wprm-wrap {
+  &.cbp-spmenu {
+    top: 76px !important;
+    z-index: 99999;
+    width: 100%;
+    //max-width: 400px;
+    background: #fff;
+    display: none;
+    border-left: 45px solid $black-50;
+
+    @media only screen and (max-width: 1239px) {
+      display: block;
+    }
+    .admin-bar &{
+      top: 116px !important;
+    }
+  }
+
+  #wprmenu_menu_ul {
+    padding: 50px 20px 0 20px;
+    background: #fff;
+    position: unset;
+
+    li {
+      position: relative;
+      border-bottom: 1px solid #c5c5c5;
+      padding: 15px 0;
+
+      > a {
+        color: #333333 !important;
+        font-family: $font-montserrat;
+        font-style: normal !important;
+        font-weight: 700 !important;
+        font-size: 12px !important;
+        line-height: 15px !important;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      span.wprmenu_icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        line-height: normal;
+        transform: translate(0, -8px);
+        padding: 10px;
+        &:before {
+          content: "\f105";
+          font-family: "FontAwesome";
+          top: 0px !important;
+        }
+        &.wprmenu_par_opened {
+          &:before {
+            content: "\f107";
+          }
+        }
+      }
+
+      &:last-child{
+        border-bottom: 0;
+      }
+
+
+      // Submenu
+      &.current-item-active{
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 46px;
+        bottom: 0;
+        z-index: 9999;
+        max-width: 382px;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        background-color: rgb(232, 232, 232);
+        padding-top: 40px;
+
+        > .wprmenu_icon{
+          display: none;
+        }
+        >a {
+          font-family: $font-montserrat !important;
+          font-style: normal !important;
+          font-weight: 700 !important;
+          font-size: 16px !important;
+          line-height: 26px !important;
+          margin-left: 20px;
+          display: inline-block;
+          text-transform: uppercase;
+          margin-bottom: 18px;
+          position: relative;
+          pointer-events: none;
+
+          &:hover, &:focus{
+            background: transparent !important;
+          }
+
+          &:after{
+            content: "\f105";
+            font-family: "FontAwesome";
+            margin-left: 6px;
+          }
+        }
+        > ul.sub-menu{
+          padding-left: 20px !important;
+          > li{
+            padding: 0 !important;
+            border-bottom: none !important;
+
+            > .wprmenu_icon{
+              display: none;
+            }
+            >a {
+              font-family: $font-montserrat !important;
+              font-style: normal !important;
+              font-weight: 700 !important;
+              font-size: 16px !important;
+              line-height: 26px !important;
+              display: inline-block;
+              text-transform: initial;
+
+              &:hover, &:focus{
+                background: transparent !important;
+              }
+            }
+            > ul.sub-menu{
+              display: block !important;
+
+              > li{
+                padding: 0 !important;
+                border-bottom: none !important;
+                >a {
+                  font-family: $font-montserrat;
+                  font-style: normal !important;
+                  font-weight: 400 !important;
+                  font-size: 14px !important;
+                  line-height: 30px !important;
+                  &:hover, &:focus{
+                    background: transparent !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .wpr_search {
+      position: absolute;
+      top: 0;
+      margin: 0 !important;
+      padding: 20px 20px !important;
+      width: 80% !important;
+
+      .wpr-search-form {
+        label {
+          display: none;
+        }
+
+        input {
+          height: 50px;
+          padding: 13px 15px !important;
+          border: 1px solid #471f6f;
+          font-family: "Knockout";
+          font-size: 20px;
+          line-height: 23px;
+          color: #471f6f;
+        }
+
+        button.wpr_submit {
+          width: 40px;
+          height: 50px;
+        }
+      }
+
+      .unibox {
+        display: none !important;
+      }
+    }
+  }
+}
+
+#wprmenu_bar {
+  pointer-events: none;
+  padding: 20px 20px 5px;
+  height: auto !important;
+  background: #fff;
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .hamburger {
+    pointer-events: auto;
+    width: 38px;
+    text-align: center;
+    height: 100%;
+    padding: 5px 0;
+    margin: 0 !important;
+    border-radius: 5px;
+    float: right;
+
+    //   .hamburger-box {
+    //     width: 21px;
+
+    //     .hamburger-inner {
+    //       width: 21px;
+    //       top: 5px;
+    //       background: #333333;
+    //       transform: none !important;
+
+    //       &:before, &:after {
+    //         width: 21px;
+    //         color: #333333;
+    //         background: #333333;
+    //         transform: none !important;
+    //         opacity: unset !important;
+    //       }
+
+    //       &:before {
+    //         top: 8px;
+    //       }
+
+    //       &:after {
+    //         top: 16px;
+    //       }
+    //     }
+    //   }
+
+    & + .menu_title {
+      display: none;
+    }
+  }
+
+  .search-button {
+    content: "";
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    right: 70px;
+    pointer-events: auto;
+    cursor: pointer;
+    background-image: url("/wp-content/uploads/2023/01/search-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .menu_title {
+    font-size: 0;
+    top: 0;
+    float: left;
+
+    a {
+      top: 0;
+
+      .bar_logo {
+        padding: 0;
+        width: auto;
+        height: 42px;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.back-button-wrapper {
+  position: fixed;
+  top: 76px;
+  height: 48px;
+  float: right;
+  max-width: 400px;
+  width: 100%;
+  right: 0;
+  z-index: 999999;
+  font-size: 20px;
+  display: none;
+  // border-bottom: 1px solid $black-40;
+  background-color: $black-30;
+  .admin-bar &{
+    top: 116px !important;
+  }
+
+
+  .back-button-container{
+    text-align: right;
+    margin: 0 20px;
+    border-bottom: 1px solid #C5C5C5;
+    padding-top: 15px;
+    padding-bottom: 6px;
+  }
+  .back-button {
+    display: inline-block;
+    padding: 0;
+    box-sizing: unset;
+    border: none;
+    font-family: $font-montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #444444;
+    position: relative;
+
+    &:before {
+      content: "\f104";
+      font-family: "FontAwesome";
+      font-weight: 400;
+      font-size: 14px;
+      position: absolute;
+      left: -15px;
+    }
+  }
+
+  .active-back-button & {
+    display: block;
+  }
+}

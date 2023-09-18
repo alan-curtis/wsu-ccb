@@ -1,0 +1,176 @@
+.featured-stories-no-img{
+  .title-section {
+    // padding-top: 67px;
+    padding-bottom: 60px;
+    @include media-breakpoint-down(md) {
+      padding-bottom: 46px;
+    }
+    h3 {
+      font-family: $font-montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      color: $dark-red;
+      padding: 0;
+      margin: 0;
+      @include media-breakpoint-down(md) {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    .top-link {
+      max-width: 140px;
+      @include media-breakpoint-down(md){
+        max-width: 125px;
+        width: 100%;
+      }
+      a {
+        color: $red;
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        @include media-breakpoint-down(md) {
+          font-size: 14px;
+          line-height: 17px;
+        }
+        &:after {
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAKCAYAAACXDi8zAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB5SURBVHgBjY7NDUBAEIVnB/eJCpTgIjihEq3ogI6cxM9FCzqwNwfxM8QmbPbgJZOXfF8yedBQ4F8HWtACO3UQa5OE3o2KwQ3nX1K8JYuKK1/3PUMFR0qJK4EDJIIlhYIrLjVD2g6RxbKbhAnecxmWOrzTUuQ9/z85AcLgNvB7jQtpAAAAAElFTkSuQmCC");
+          // content: "\f054";
+          content: "";
+          background-repeat: no-repeat;
+          width: 6px;
+          height: 12px;
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .news-row{
+    margin-bottom: 6px;
+    @include media-breakpoint-down(md) {
+      margin-top: 14px;
+    }
+    .rows-col{
+      margin-bottom: 24px;
+      .card-wrapper {
+        background: $black-30;
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+          padding: 20px;
+        }
+        .card-title {
+          margin-bottom: 10px;
+          @include media-breakpoint-down(md) {
+            margin-bottom: 16px;
+          }
+          h3 {
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+            color: $red;
+            padding:0;
+            margin: 0;
+            @include media-breakpoint-down(md) {
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+        }
+        .card-desc {
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          color: $text;
+          @include media-breakpoint-down(md) {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+        .card-actions {
+          margin-top: auto;
+          text-align: right;
+          .upper-btn {
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $dark-red;
+            @include media-breakpoint-down(md) {
+              font-size: 14px;
+              line-height: 17px;
+            }
+            &:after {
+              // background-image: url("data:image/svg+xml,%0A%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.36384 4.65179C5.42336 4.71131 5.45312 4.77976 5.45312 4.85714C5.45312 4.93452 5.42336 5.00298 5.36384 5.0625L1.20312 9.22321C1.1436 9.28274 1.07515 9.3125 0.997768 9.3125C0.920387 9.3125 0.851935 9.28274 0.792411 9.22321L0.345982 8.77679C0.286458 8.71726 0.256696 8.64881 0.256696 8.57143C0.256696 8.49405 0.286458 8.4256 0.345982 8.36607L3.85491 4.85714L0.345982 1.34821C0.286458 1.28869 0.256696 1.22024 0.256696 1.14286C0.256696 1.06548 0.286458 0.997023 0.345982 0.9375L0.792411 0.491071C0.851935 0.431547 0.920387 0.401785 0.997768 0.401785C1.07515 0.401785 1.1436 0.431547 1.20312 0.491071L5.36384 4.65179Z' fill='%23CA1237'/%3E%3C/svg%3E%0A");
+              // content: "\f054";
+
+              background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAASCAYAAAB4i6/FAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACXSURBVHgBvY49DoJAEIVnVgyVukfY0phovAInsNfGm8gVPAGxUI9BPIEm2ssRtiUEHix/AbItvGKK9+WbPKIJEkglbb1wsXg/Vtt/INeqB0BkDOViHnahIE69AuohZHPucrMnzEKu7CjmxONG7UN8RPszcw61Yf68SuO53F3A8OvydtTfM9vKaq6lNHEAXIvR+qR/Po2THOgyNxVC5uv6AAAAAElFTkSuQmCC");
+              content: "";
+              background-repeat: no-repeat;
+              width: 6px;
+              height: 15px;
+              display: inline-block;
+              margin-left: 8px;
+              @include media-breakpoint-down(md) {
+                margin-left: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .red-btn {
+    text-align: center;
+    button {
+      background: $red;
+      color: $white;
+      padding: 16px;
+      font-family: $font-montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(md) {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 7px 5px 7px 12px;
+      }
+      &:after {
+        content: "\f078";
+        font-family: "FontAwesome";
+        font-size: 13px;
+        padding-left: 5px;
+        @include media-breakpoint-down(md) {
+          content: "";
+        }
+      }
+      &:hover{
+        background-color: $red;
+        box-shadow: 0px 4px 20px rgba(202, 18, 55, 0.75);
+        transform: translate(0, -5px);
+        text-decoration: none;
+        transition: transform ease 0.5s;
+    }
+    }
+
+  }
+
+}

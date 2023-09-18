@@ -1,0 +1,65 @@
+.career-block-section{
+    margin-bottom: 45px;
+    @include media-breakpoint-up(md){
+        margin-top: 65px;
+    }
+    .copy{
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md){
+        margin-top: 20px;
+        }
+    }
+    .career-container{
+        margin-bottom: 3px;
+        margin-top: 3px;
+        @include media-breakpoint-up(md){
+            margin-bottom: 12px;
+            margin-top: 12px;
+        }
+
+        &__inner{
+            background-color: $grey;
+            height: 100%;
+            width: 100%;
+            padding: 22px 13px;
+        }
+        h4{
+            font-size: 0.875em;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+            @include media-breakpoint-up(md){
+            font-size: 1.125em;
+            }
+        }
+        .salary{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include media-breakpoint-up(md){
+                margin-top: 15px;
+                font-size: 1.125em;
+                }
+        }
+        .credit{
+            color: $btn-grey2;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 10px;
+            a{
+                color: $btn-grey2;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

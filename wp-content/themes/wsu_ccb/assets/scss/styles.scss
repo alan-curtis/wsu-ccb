@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/**
+ * This file will be overwritten when the Bootstrap Framework source files
+ * are compiled using the SASS CSS pre-processor.
+ */
+
+/**
+* Include bootstrap
+ */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
+
+
+//Variables
+@import "base/variables";
+@import "base/base_fonts";
+@import "base/typography";
+
+//Components
+@import "components/mobile-menu";
+@import "components/header";
+@import "components/footer";
+@import "components/hero";
+@import "components/cta-image";
+@import "components/featured-testimonial";
+@import "components/featured-media";
+@import "components/stats-section";
+@import "components/masonry-grid";
+@import "components/news-events";
+@import "components/cta-card";
+@import "components/cta-card-img";
+@import "components/list-block-img";
+@import "components/fullwidth-list-block";
+@import "components/banner-cta";
+@import "components/facts-ranks";
+@import "components/slider";
+@import "components/accordion";
+@import "components/contact";
+@import "components/banner";
+@import "components/cta-icon-block";
+@import "components/cta-list-icon";
+@import "components/content-sidebar";
+@import "components/video-button";
+@import "components/secondary-nav";
+@import "components/logo-block";
+@import "components/featured-faculty";
+@import "components/accordion-repeater";
+@import "components/search-section";
+@import "components/careers-block";
+
+//News
+@import "news/featured-banner";
+@import "news/featured-news";
+@import "news/featured-cta";
+@import "news/more-news";
+@import "news/featured-stories";
+
+//Events Page
+@import "components/events";

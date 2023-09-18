@@ -1,0 +1,136 @@
+.facts-ranks-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md){
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .facts-ranks-wrap{
+        margin-top:20px;
+        margin-bottom:20px;
+        position: relative;
+        @include media-breakpoint-up(md){
+            margin-top: 0;
+            margin-bottom: 0;
+            border-left: 1px solid #ddd;
+            &:first-of-type{
+                border: none;
+            }
+        }
+        span{
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 44px;
+            color: $dark-red;
+            display: block;
+            text-align: center;
+            @include media-breakpoint-up(md){
+                font-size: 60px; 
+                padding-bottom: 40px;
+            }
+        }
+        .citation{
+            font-weight: 400;
+            text-decoration: underline;
+        }
+        .copy{
+            font-size: 14px;
+            color: $btn-grey2;
+            font-weight: 600;
+            display: block;
+            border-left: 1px solid #B0B0B0;
+            @include media-breakpoint-up(md){
+                font-size: 18px;
+                border: none;
+            }
+            a{
+                text-decoration: underline;;
+                color: $btn-grey2;
+
+            }
+            .citation{
+                font-weight: 400;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            p{
+                margin:0;
+                padding:0;
+            }
+        }
+    }
+
+}
+.facts-ranks-sidebar-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md){
+        text-align: left;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .facts-ranks-wrap{
+        margin-top:20px;
+        margin-bottom:20px;
+        position: relative;
+        @include media-breakpoint-up(md){
+            margin-top: 0px;
+            margin-bottom: 30px;
+            
+        }
+        span{
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 44px;
+            color: $red;
+            display: block;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            @include media-breakpoint-up(md){
+                font-size: 60px; 
+                padding-bottom: 40px;
+            }
+        }
+        .citation{
+            font-weight: 400;
+            text-decoration: underline;
+        }
+        .copy{
+            font-size: 14px;
+            color: $btn-grey2;
+            font-weight: 600;
+            display: block;
+        
+            @include media-breakpoint-up(md){
+                font-size: 18px;
+                border: none;
+            }
+            a{
+                text-decoration: underline;;
+                color: $btn-grey2;
+
+            }
+            .citation{
+                font-weight: 400;
+                text-decoration: none;
+                color: $black-50;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            p{
+                margin:0;
+                padding-top: 15px;
+                padding-bottom: 5px;
+                @include media-breakpoint-up(md){
+
+                    max-width: 333px;
+                }
+            }
+        }
+    }
+}

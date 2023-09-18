@@ -1,0 +1,157 @@
+.testimonial-section{
+    background-color: $grey;
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    @include media-breakpoint-up(md) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .quote-wrap{
+        display: flex;
+        .quote{
+            
+            font-size: 44px;
+            font-weight: bold;
+            color: $dark-red;
+            line-height: 18px;
+        }
+        .top-border {
+            width: 85%;
+            height: 1px;
+            background-color: $dark-red;
+            margin-left: 9px;
+            margin-right: auto;
+        }
+    }
+    .copy{
+        font-weight: 600;
+        font-size: 0.875em;
+        padding-top: 25px;
+        p{
+            max-width: 90%;
+            margin-bottom: 0;
+        }
+    }
+        .name-wrap{
+            max-width: 80%;
+            padding-left: 15px;
+            align-items: center;
+          .name{
+            color: $dark-red;
+            white-space: nowrap;
+            padding: 10px 0;
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            @include media-breakpoint-up(md) {
+              padding: 15px;
+            }
+          }
+            .bottom-border{
+                width: 100%;
+                height: 1px;
+                background-color: $dark-red;
+                margin-bottom: 10px;
+                @include media-breakpoint-up(md) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    .image{
+        padding: 20px 20px;
+        img{
+            min-width: 100px;
+            border-radius: 50%;
+        }
+    }
+    &__full-width{
+        background-color: $grey;
+        &__inner{
+            align-items: center;
+            margin-left: -15px;
+            margin-right: -15px;
+            @include media-breakpoint-up(md) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .quote-wrap{
+                display: flex;
+                margin-bottom: 15px;
+                @include media-breakpoint-up(md) {
+                    margin-top: 150px;
+                    margin-bottom: 50px;
+                }
+                .quote{
+                    
+                    font-size: 44px;
+                    font-weight: bold;
+                    color: $dark-red;
+                    line-height: 18px;
+                    @include media-breakpoint-up(md) {
+                        font-size: 60px;
+                    }
+                }
+                .top-border {
+                    width: 92%;
+                    height: 2px;
+                    background-color: $dark-red;
+                    margin-left: 9px;
+                    margin-right: auto;
+
+                }
+            }
+            .copy{
+                font-weight: 600;
+                font-size: 0.875em;
+                padding-top: 25px;
+                p{
+                    max-width: 90%;
+                    margin-bottom: 0;
+                }
+            }
+                .name-wrap{
+                    max-width: 100%;
+                    padding-left: 15px;
+                    align-items: center;
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: 105px;
+                        margin-top: 70px;
+                    }
+                    .name{
+                    color: $dark-red;
+                    // white-space: nowrap;
+                    padding: 10px 0;
+                    font-family: $font-montserrat;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    @include media-breakpoint-up(md) {
+                        padding: 15px;
+                    }
+                    }
+                    .bottom-border{
+                        width: 100%;
+                        height: 2px;
+                        background-color: $dark-red;
+                        margin-bottom: 10px;
+                        @include media-breakpoint-up(md) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            .image{
+                padding: 20px 20px;
+                img{
+                    min-width: 100px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

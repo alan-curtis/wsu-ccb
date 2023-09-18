@@ -1,0 +1,32 @@
+.fullwidth-list-block-section{
+    .img-wrap{
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        min-height: 210px;
+        @include media-breakpoint-up(md){
+            min-height: 450px;
+        }
+    }
+    .content-wrap{
+        background: $grey;
+        .content-inner{
+            max-width: 600px;
+            padding: 50px;
+            a{
+                display: block;
+                margin-top:30px;
+                font-weight: bold;
+                text-transform: uppercase;
+                &:after{
+                    content:"\f054";
+                    font-family: "FontAwesome";
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

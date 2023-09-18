@@ -1,0 +1,59 @@
+.featured-media {
+  padding: 32.5px 0px;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    padding: 65px 0px;
+  }
+
+  .wrapiframe {
+    iframe {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      // &:hover .play-pause-button {
+      //   display: block;
+      //   cursor: pointer;
+      // }
+    }
+  }
+
+
+  .iframepadding {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  }
+
+  .playicon {
+    position: absolute;
+    bottom: 41%;
+    left: 45%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .vimeoIcon {
+    background: $white;
+    padding: 21px 23px 21px 23px;
+    border-radius: 93px;
+    font-size: 30px;
+    color: $dark-red;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+      color: #fff;
+      background: $dark-red;
+    }
+  }
+
+  .img-block {
+    position: relative;
+    img {
+      // height: 100%;
+      object-fit: cover;
+    }
+  }
+}

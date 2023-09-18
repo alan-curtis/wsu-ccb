@@ -1,0 +1,128 @@
+.accordion-repeater-section{
+    position: relative;
+    background-color: $white;
+    @include media-breakpoint-up(lg){
+    padding-bottom: 80px;
+    padding-top: 60px;
+    }
+    .accordion-containers{
+        .accordion{
+            --bs-accordion-active-color: $black;
+            .accordion-item{
+                background-color: $grey;
+                border: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                position: relative;
+                .accordion-header{
+                    .accordion-button{
+                        background-color: $white;
+                        line-height: 18px;
+                        font-weight: 600;
+                        border: 1px solid #B0B0B0;
+                        font-size: 14px;
+                        @include media-breakpoint-up(md){
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                        &:after{
+                            font-family: "FontAwesome";
+                            content: "\f078";
+                            text-align: center;
+                            background-image: none;
+                            border-radius: 50%;
+                            color: $dark-red;
+                            position: absolute;
+                            right: 10px;
+                            font-size: 0.825em;
+                            padding-top: 3px;
+                            height: 26px;
+                            width: 26px;
+                        }
+                    }
+                    
+                }
+                .accordion-body{
+                    .locations,.credits,.location{
+                        font-weight: 600;
+                        
+                    }
+                    .locations,.credits,.location-title,.location{
+                        font-size: 12px;
+                        padding-right: 10px;
+                    }
+                    .copy{
+                        padding-top: 15px;
+                    }
+                    a {
+                        margin: 0;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        color: $red;
+                        display: inline-block;
+                        @include media-breakpoint-down(md) {
+                          font-size: 14px;
+                          line-height: 17px;
+                        }
+            
+                        &:after {
+                          background-image: url("data:image/svg+xml,%0A%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.36384 4.65179C5.42336 4.71131 5.45312 4.77976 5.45312 4.85714C5.45312 4.93452 5.42336 5.00298 5.36384 5.0625L1.20312 9.22321C1.1436 9.28274 1.07515 9.3125 0.997768 9.3125C0.920387 9.3125 0.851935 9.28274 0.792411 9.22321L0.345982 8.77679C0.286458 8.71726 0.256696 8.64881 0.256696 8.57143C0.256696 8.49405 0.286458 8.4256 0.345982 8.36607L3.85491 4.85714L0.345982 1.34821C0.286458 1.28869 0.256696 1.22024 0.256696 1.14286C0.256696 1.06548 0.286458 0.997023 0.345982 0.9375L0.792411 0.491071C0.851935 0.431547 0.920387 0.401785 0.997768 0.401785C1.07515 0.401785 1.1436 0.431547 1.20312 0.491071L5.36384 4.65179Z' fill='%23CA1237'/%3E%3C/svg%3E%0A");
+                          content: "";
+                          background-repeat: no-repeat;
+                          width: 6px;
+                          height: 10px;
+                          display: inline-block;
+                          margin-left: 8px;
+                        }
+                      }
+                }
+            }
+        }
+    }
+    .research-cta{
+        background-color: $grey;
+        max-width: 387px;
+        padding: 20px;
+        text-align: left;
+        margin: 25px auto 20px auto;
+        @include media-breakpoint-up(lg){
+            text-align: center;
+        }
+        .red-btn{
+            color: $white;
+            background-color: $red;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            position: relative;
+            transition: transform ease 0.5s;
+            min-width: 140px;
+            padding: 16px 50px;
+
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 0;
+            text-align: center;
+            &:hover{
+                background-color: $dark-red;
+                box-shadow: 0px 4px 20px rgba(202, 18, 55, 0.75);
+                transform: translate(0, -5px);
+                text-decoration: none;
+            }
+        }
+    }
+    .callout{
+        margin: 20px auto 20px auto;
+        max-width: 387px;
+        .callout-copy{
+            background-color: $dark-red;
+            color: $white;
+            padding: 25px;
+            h3{
+                color: $white;
+            }
+        }
+    }
+}

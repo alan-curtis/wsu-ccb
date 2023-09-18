@@ -1,0 +1,86 @@
+.list-block-section{
+    background-color: $dark-red;
+    @include media-breakpoint-up(md) {
+        background: linear-gradient(90deg, $dark-red 50%, $white 50%);
+    }
+    .section-wrap {
+        background-color: $dark-red;
+    }
+    .section-block {
+        padding: 37px 39px 37px 0;
+        @include media-breakpoint-down(md) {
+            padding: 30px 0px;
+        }
+        .list-block {
+            display: flex;
+            gap: 22px;
+            margin-bottom: 30px;
+            .image {
+                min-width: 285px;
+                min-height: 185px;
+                @include media-breakpoint-down(md) {
+                    min-width: 149px;
+                }
+            }
+            .body {
+                .title h3 {
+                    color: #fff !important;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 37px;
+                    padding: 0 !important;
+                    @include media-breakpoint-down(md) {
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+                }
+                .description {
+                    color: #fff !important;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    @include media-breakpoint-down(md) {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+
+                .link a {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #FFFFFF !important;
+                    @include media-breakpoint-down(md) {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+
+                    &:after {
+                        content: "\f054";
+                        font-family: "FontAwesome";
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 10px;
+                        text-decoration: none;
+                        position: absolute;
+                        padding: 3px;
+                        padding-left: 5px !important;
+                    }
+                }
+             }
+
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+    }
+}

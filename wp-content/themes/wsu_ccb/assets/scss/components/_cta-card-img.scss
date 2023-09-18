@@ -1,0 +1,80 @@
+.cta-card-img-section{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .title{
+        text-align:left;
+        font-size: 24px;
+        font-weight: bold;
+        color: $dark-red;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md) { 
+            text-align:center;
+            font-size: 30px;
+        }
+    }
+.card-inner{
+
+    .img-wrap{
+        min-width: 350px;
+        min-height: 215px;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+        .img-holder{
+            min-width: 350px;
+        min-height: 260px;
+            background-position: center !important;
+            background-size: cover !important;
+            filter: grayscale(100%);
+            background-repeat: no-repeat!important;
+            @include media-breakpoint-up(md) { 
+                min-height: 215px;
+            }
+        }
+    }
+    .card-wrap{
+        background-color: $dark-red;
+        padding: 35px 30px 22px 30px;
+        .cta-title{
+            color: $white;
+            font-weight: 600;
+            font-size: 22px;
+            padding-bottom: 15px;
+        }
+        .copy{
+            font-size: 18px;
+            color: $white;
+        }
+        .red-btn{
+            color: $white;
+            background-color: $dark-red;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            position: relative;
+            transition: transform ease 0.5s;
+            min-width: 140px;
+            padding: 16px;
+            min-height: 52px;
+            border: 1px solid $white;
+            margin: 25px 0;
+            border-radius: 0;
+            text-align: center;
+            &:hover{
+                background-color: $white;
+                color: $red;
+                text-decoration: none;
+            }
+        }
+    }
+    &:hover{
+        .img-holder{
+            filter: grayscale(0%);
+            transition: transform ease 0.5s;
+            transform: scale(1.1);
+        }
+    }
+}
+}

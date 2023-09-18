@@ -1,0 +1,213 @@
+.contact-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .main-view-column {
+    .view-column {
+      border-right: 2px solid #cccccc;
+      @include media-breakpoint-down(md) {
+        position: relative;
+        border: none;
+      }
+      &:last-child {
+        border: none;
+      }
+      // First Block
+      &.title-section {
+        h3 {
+          padding: 0;
+          margin: 0;
+          font-size: 30px;
+        }
+        @include media-breakpoint-down(md) {
+          margin-bottom: 33px;
+          padding-left: 102px;
+          font-size: 24px;
+        }
+      }
+
+      // Second Block
+      &.content-section {
+        @include media-breakpoint-up(lg){
+          padding-left: 30px;
+        }
+        @include media-breakpoint-up(xxl){
+          padding-left: 50px;
+        }
+
+        @include media-breakpoint-down(md) {
+          padding-left: 102px;
+          border: none;
+          max-width: min-content;
+          p:last-of-type {
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 7px;
+          }
+        }
+
+
+        .name {
+          font-weight: 600;
+          font-size: 18px;
+          @include media-breakpoint-down(md) {
+            white-space: nowrap;
+          }
+        }
+
+        .person-title,
+        .person-department {
+          font-size: 14px;
+          margin-bottom: 0.675em;
+        }
+      }
+
+      // Third Block
+      &.contact-info {
+        @include media-breakpoint-up(lg){
+          padding-left: 30px;
+        }
+        @include media-breakpoint-up(xxl){
+          padding-left: 50px;
+        }
+
+        a {
+          display: block;
+          font-weight: 600;
+          font-size: 18px;
+        }
+        @include media-breakpoint-down(md) {
+          padding-left: 103px;
+          margin-bottom: 80px;
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+
+      // Fourth Block
+      &.social-wrap {
+        text-align: right;
+        .social-media{
+          display: flex;
+          flex-flow: row;
+          justify-content: center;
+          a {
+            text-align: center;
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+            background-color: $dark-red;
+            border-radius: 50%;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row;
+            margin-right: 10px;
+            margin-bottom: 10px;
+
+            @include media-breakpoint-down(xl){
+              height: 35px;
+              width: 35px;
+              font-size: 20px;
+            }
+
+            @include media-breakpoint-down(lg) {
+              height: 30px;
+              width: 30px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+Contact Mobile
+ */
+
+.contact-mobile{
+  &__title{
+    font-family: $font-montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: $dark-red;
+    margin-bottom: 35px;
+    h3{
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__wrapper{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  &__content{
+    font-family: $font-montserrat;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+    border-bottom: 1px solid $color-ccc;
+    max-width: 151px;
+    width: 100%;
+    margin-bottom: 18px;
+    .name{
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .person-title{
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    .person-department{
+      margin-bottom: 8px;
+    }
+  }
+  &__contact{
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    padding-right: 15px;
+    a{
+      font-family: $font-montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      text-decoration-line: underline;
+      color: $text;
+    }
+  }
+  &__right{
+    .social-media{
+      display: flex;
+      flex-flow: wrap;
+      flex-direction: column;
+      a {
+        text-align: center;
+        height: 28px;
+        width: 28px;
+        font-size: 14px;
+        background-color: $dark-red;
+        border-radius: 50%;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+

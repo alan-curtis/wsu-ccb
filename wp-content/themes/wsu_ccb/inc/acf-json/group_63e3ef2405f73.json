@@ -1,0 +1,88 @@
+{
+    "key": "group_63e3ef2405f73",
+    "title": "Single Page Sidebar Section",
+    "fields": [
+        {
+            "key": "field_63e3ef24c5fca",
+            "label": "Sidebar",
+            "name": "sidebar",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Does this page have a sidebar?",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6435a1dcc4049",
+            "label": "Menu Select",
+            "name": "menu_select",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "footer-menu-1": "Footer Menu 1",
+                "footer-menu-2": "Footer Menu 2",
+                "footer-menu-3": "Footer Menu 3",
+                "footer-menu-4": "Footer Menu 4",
+                "footer-menu-5": "Footer Menu 5",
+                "footer-menu-6": "Footer Menu 6",
+                "footer-menu-7": "Footer Menu 7",
+                "footer-top-nav": "Footer Top Nav",
+                "main-nav": "Main Nav",
+                "top-nav": "Top Nav",
+                "test": "test"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page--resources.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1684438600
+}

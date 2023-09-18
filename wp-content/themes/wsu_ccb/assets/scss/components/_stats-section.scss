@@ -1,0 +1,317 @@
+.accordion-container {
+  .accordion {
+    --bs-accordion-active-color: $black;
+
+    .accordion-item {
+      background-color: $grey;
+      border-color: $white;
+
+      .accordion-header {
+        .accordion-button {
+          background-color: $grey;
+          line-height: 19.5px;
+          font-weight: 700;
+
+          img {
+            padding-right: 10px;
+            max-width: 50px;
+          }
+          &:after {
+            font-family: "FontAwesome";
+            content: "\f054";
+            text-align: center;
+            background-image: none;
+            background-color: #5BC3F5;
+            border-radius: 50%;
+            color: $white;
+            position: absolute;
+            right: -9px;
+            font-size: 0.625em;
+            padding-top: 3px;
+            height: 26px;
+            width: 26px;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.icons-mobile {
+  position: relative;
+  .paper-plane {
+    content: "";
+    background-image: url("/wp-content/themes/wsu_ccb/assets/images/paper-plane.svg");
+    position: absolute;
+    width: 80px;
+    height: 53px;
+    background-repeat: no-repeat;
+    bottom: 60px;
+    left: 35px;
+  }
+
+  .lightbulb {
+    background-image: url("/wp-content/themes/wsu_ccb/assets/images/lightbulb.svg");
+    width: 40px;
+    height: 68px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 15px;
+    transform: translate(0, 100%);
+    @include media-breakpoint-down(md){
+      top: 24.27%;
+      bottom: 74.56%;
+    }
+  }
+
+
+
+  .book {
+    background-image: url("/wp-content/themes/wsu_ccb/assets/images/book.svg");
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 81px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+  }
+}
+
+.stats-mobile {
+  margin-top: 35px;
+
+  .stat-wrap {
+    margin-bottom: 15px;
+    .stat-number {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      color: $red;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .statTitle {
+      position: relative;
+      font-family: $font-montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      color: #707070;
+      line-height: 18px;
+      padding-top: 10px;
+      margin-bottom: 5px;
+      border-top: 1px solid #9C9C9C;
+    }
+    .statsubtitle{
+      font-family: $font-montserrat;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #9C9C9C;
+    }
+  }
+
+}
+
+.bg-wrap {
+  position: relative;
+}
+
+.woman-bg {
+  background-image: url('/wp-content/themes/wsu_ccb/assets/images/woman-background.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -150px;
+  right: -315px;
+  width: 506px;
+  height: 720px;
+  @include media-breakpoint-down(md){
+    top: 40px;
+    right: -250px;
+  }
+}
+
+.mobile {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+  .title-center {
+    & h1 {
+      text-align: center !important;
+    }
+  }
+}
+
+.stat-section {
+  margin: 125px 0;
+  @include media-breakpoint-down(md){
+    margin: 0;
+  }
+  .desktop {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: -webkit-box;
+    }
+  }
+
+  .container {
+
+    .stats-wrapper{
+     background: $grey;
+      position: relative;
+      padding-bottom: 80px;
+
+      &:before{
+        content: '';
+        background: $grey;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .stat-title {
+      text-align: center;
+      margin: 25px 0;
+
+      h1 {
+        color: $dark-red;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin: 0 0 25px;
+        text-align: left;
+        padding: 50px 0;
+      }
+    }
+  }
+
+  .row-container {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: baseline;
+
+    .img-wrap {
+      width: 75px;
+    }
+
+    .copy-wrap {
+      padding-left: 35px;
+
+      .title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+      }
+
+      .copy {
+        font-weight: 400;
+        font-size: 18px;
+        color: #707070;
+      }
+
+      a {
+        color: $red;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 22px;
+        display: block;
+
+        &:after {
+          content: "\f054";
+          font-family: "FontAwesome";
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 10px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .stat-wrapper {
+    .stats-container {
+      padding: 25px 25px 25px 50px;
+      .stat-wrap {
+        margin-bottom: 30px;
+        .stat-number {
+          display: block;
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 44px;
+          color: $red;
+          margin-bottom: 15px;
+        }
+
+        .statTitle {
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          position: relative;
+          color: #707070;
+          margin-bottom: 5px;
+          padding-top: 10px;
+          border-top:1px solid #9C9C9C;
+        }
+        .stats-sub-title{
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #707070;
+        }
+      }
+    }
+  }
+
+  .icons-desktop {
+    position: relative;
+    display: block;
+    height: 290px;
+
+    .paper-plane {
+      content: "";
+      background-image: url("/wp-content/themes/wsu_ccb/assets/images/paper-plane.svg");
+      position: absolute;
+      width: 120px;
+      height: 90px;
+      background-repeat: no-repeat;
+      left: -100px;
+      background-size: 118px 81px;
+      top: 81px;
+    }
+
+    .lightbulb {
+      background-image: url("/wp-content/themes/wsu_ccb/assets/images/lightbulb.svg");
+      width: 60px;
+      height: 100px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 60px;
+      background-size: 60px 100px;
+      transform: rotate(345deg);
+      top: 37px;
+    }
+
+    .book {
+      background-image: url("/wp-content/themes/wsu_ccb/assets/images/book-desktop.svg");
+      background-repeat: no-repeat;
+      width: 90px;
+      height: 81px;
+      position: absolute;
+      bottom: 30px;
+      left: 75px;
+      background-size: 90px 70px;
+      transform: rotate(345deg);
+    }
+  }
+}

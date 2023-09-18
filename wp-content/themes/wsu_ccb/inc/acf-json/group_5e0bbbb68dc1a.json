@@ -1,0 +1,419 @@
+{
+    "key": "group_5e0bbbb68dc1a",
+    "title": "Hero",
+    "fields": [
+        {
+            "key": "field_5e17ac8173a03",
+            "label": "Hero Carousel Height",
+            "name": "carousel_height",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "auto": "Auto",
+                "250px": "250px",
+                "450px": "450px",
+                "650px": "650px"
+            },
+            "default_value": "auto",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e0bbc0aba48f",
+            "label": "Hero Carousel",
+            "name": "carousel_slide",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Carousel Slide",
+            "sub_fields": [
+                {
+                    "key": "field_5e0bbc74ba490",
+                    "label": "Carousel Slide Type",
+                    "name": "carousel_slide_type",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "image": "Image",
+                        "video": "Video",
+                        "video_url": "Video URL",
+                        "youtube": "YouTube"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "image",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e0bbf2981007",
+                    "label": "Carousel Slide Title",
+                    "name": "carousel_slide_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "!=",
+                                "value": "youtube"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e0bbf3b81008",
+                    "label": "Carousel Slide Subtitle",
+                    "name": "carousel_slide_subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "!=",
+                                "value": "youtube"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e152148d4dc0",
+                    "label": "Carousel Slide CTA",
+                    "name": "carousel_slide_url",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Add a Link to the Carousel Slide CTA.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "!=",
+                                "value": "youtube"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e0bbf0081006",
+                    "label": "Carousel Slide Image",
+                    "name": "carousel_slide_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e0bbf4c81009",
+                    "label": "Carousel Slide YouTube URL",
+                    "name": "carousel_slide_youtube",
+                    "aria-label": "",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "youtube"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": "",
+                    "height": "",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e1521a8d4dc1",
+                    "label": "Carousel Slide Video URL (.mp4)",
+                    "name": "carousel_slide_video_url_mp4",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "video_url"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e1521fad4dc2",
+                    "label": "Carousel Slide Video URL (.webm)",
+                    "name": "carousel_slide_video_url_webm",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Smaller in file size but only supported on Chrome, Firefox.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "video_url"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e152241d4dc3",
+                    "label": "Carousel Slide Video URL (.ogv)",
+                    "name": "carousel_slide_video_url_ogv",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "video_url"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e17a96aceeb3",
+                    "label": "Carousel Slide Video (.mp4)",
+                    "name": "carousel_slide_video_mp4",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "mp4",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e17aa0fceeb5",
+                    "label": "Carousel Slide Video (.webm)",
+                    "name": "carousel_slide_video_webm",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "Smaller in file size but only supported on Chrome, Firefox",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "webm",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                },
+                {
+                    "key": "field_5e17aa25ceeb6",
+                    "label": "Carousel Slide Video (.ogv)",
+                    "name": "carousel_slide_video_ogv",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e0bbc74ba490",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "ogv",
+                    "parent_repeater": "field_5e0bbc0aba48f"
+                }
+            ],
+            "rows_per_page": 20
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/hero"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1681835632
+}

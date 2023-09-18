@@ -1,0 +1,1414 @@
+.the-calendar-events-page {
+  .left-content {
+    .tribe-events-header__top-bar {
+      display: none;
+    }
+
+    .tribe-events-header__events-bar {
+      display: none;
+    }
+
+    .tribe-events-header--has-event-search {
+      display: none;
+    }
+  }
+
+  .tribe-events {
+
+    .tribe-events-l-container {
+      padding: 0 !important;
+      min-height: auto !important;
+      margin-top: -20px !important;
+      @include media-breakpoint-down(lg) {
+        margin-top: 0 !important;
+      }
+    }
+
+    .tribe-events-c-messages__message {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tribe-events-calendar-list {
+      &__month-separator {
+        border-bottom: 1px solid #707070;
+        padding-bottom: 8px;
+        margin-bottom: 67px;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 30px;
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &__month-separator-text {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+        text-transform: uppercase;
+        color: $text;
+      }
+
+      // Event Row
+      &__event-row {
+        margin-bottom: 54px;
+        margin-top: 0;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &__event-date-tag {
+        &-datetime {
+          background: #ca1237;
+          height: auto;
+        }
+
+        &-daynum {
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 27.7073px;
+          line-height: 24px;
+          text-align: center;
+          color: $white;
+        }
+
+        &-month {
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 11.1047px;
+          line-height: 14px;
+          /* identical to box height */
+          text-transform: uppercase;
+          color: $white;
+          padding-bottom: 5px;
+        }
+
+        &-weekday {
+          background: #333333;
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 8px;
+          line-height: 12px;
+          /* or 145% */
+          text-align: center;
+          color: #b0b0b0;
+          padding: 2px 0;
+        }
+      }
+
+      &__event-wrapper {
+        padding-left: 50px;
+
+        @include media-breakpoint-down(md) {
+          padding-left: 7px;
+        }
+      }
+
+      &__event {
+        margin: 0;
+      }
+
+      &__event-details {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      &__event-header {
+      }
+
+      &__event-title {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        color: $text;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #707070;
+        margin-bottom: 5px;
+
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
+          line-height: 20px;
+          padding-bottom: 10px;
+        }
+
+        a {
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            border: none;
+          }
+        }
+      }
+
+      &__heading,
+      &__time,
+      &__event-venue,
+      &__event-datetime {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $btn-grey2;
+
+        @include media-breakpoint-down(md) {
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+      }
+
+      &__event-venue {
+        display: inline-block;
+      }
+
+      &__event-datetime-wrapper {
+        display: inline-block;
+      }
+
+      &-nav {
+        .tribe-events-c-nav__list {
+          justify-content: flex-start;
+          display: none;
+
+          .tribe-events-c-nav__list-item {
+            width: auto !important;
+          }
+
+          .tribe-events-c-nav__list-item--prev {
+            margin-right: 17px;
+
+            .tribe-events-c-nav__prev {
+              padding: 16px;
+              font-family: $font-montserrat;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              text-transform: uppercase;
+              color: $white;
+              background: #707070;
+
+              .tribe-events-c-nav__prev-icon-svg {
+                path {
+                  fill: $white !important;
+                }
+              }
+            }
+          }
+
+          .tribe-events-c-nav__list-item--today {
+            display: none;
+          }
+
+          .tribe-events-c-nav__list-item--next {
+            .tribe-events-c-nav__next {
+              background: $red;
+              padding: 16px;
+              font-family: $font-montserrat;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              text-transform: uppercase;
+              color: $white;
+
+              .tribe-events-c-nav__next-icon-svg {
+                path {
+                  fill: $white !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right-content {
+
+    .subchild {
+      ul {
+        li {
+          border-bottom: 2px solid #F08620 !important;
+        }
+      }
+    }
+
+    .tribe-events-header--has-event-search {
+      background: $red;
+      margin: 0 !important;
+      padding: 16px !important;
+      display: none;
+
+      .tribe-events-c-top-bar__nav-list-item {
+        a {
+          font-weight: 900;
+          font-size: 17px;
+          line-height: 17px;
+
+          .tribe-common-c-svgicon--caret-left,
+          .tribe-common-c-svgicon--caret-right {
+            path {
+              fill: $white !important;
+            }
+          }
+        }
+      }
+
+      .tribe-events-c-top-bar__nav-list-date {
+        font-family: $font-montserrat;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+      }
+    }
+
+    .calender {
+      padding-top: 30px;
+    }
+
+    .tribe-events-calendar-month__header {
+      background: #dddddd;
+
+      .tribe-events-calendar-month__header-column {
+        padding-top: 10px;
+        padding-bottom: 13px !important;
+
+        .tribe-events-calendar-month__header-column-title {
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          color: $text;
+        }
+      }
+    }
+
+    .tribe-events-calendar-month__body {
+      padding: 0 2px;
+      background: #f6f6f6;
+
+      .tribe-events-calendar-month__day {
+        border: 3px solid #f6f6f6 !important;
+        border-radius: 0 !important;
+        background: $white;
+
+        .tribe-events-calendar-month__day-cell {
+          justify-content: center;
+          background-color: transparent !important;
+
+          h3 {
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 400 !important;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: $text;
+
+            &:hover {
+            }
+
+            // opacity: 100%!important;
+          }
+
+          &:hover, &:focus, &:active {
+            background-color: transparent !important;
+          }
+        }
+      }
+
+      .tribe-events-calendar-month__day--past-month {
+        background: #f6f6f6 !important;
+
+        h3 {
+          color: #a3a3a3 !important;
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          // opacity: 100%!important;
+        }
+      }
+
+      .tribe-events-calendar-month__day--current {
+        .tribe-events-calendar-month__day-cell--selected {
+          background: none !important;
+        }
+      }
+
+      .tribe-events-calendar-month__mobile-events-icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 0;
+        border-bottom: 15px solid #ca1237;
+        border-left: 15px solid transparent;
+        background: transparent;
+      }
+
+      .tribe-events-calendar-month__day--next-month {
+        background: #f6f6f6 !important;
+
+        h3 {
+          color: #a3a3a3 !important;
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+
+          time {
+            color: #a3a3a3 !important;
+          }
+        }
+      }
+    }
+
+    .tribe-events-calendar-month-mobile-events, .tribe-events-widget-events-month__view-more, .tribe-events-header__messages {
+      display: none;
+    }
+
+    .taxonomy {
+      a {
+        cursor: pointer !important;
+
+        &:hover {
+          text-decoration: none !important;
+        }
+      }
+
+      h2 {
+        color: $text;
+        font-family: $font-montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-bottom: 20px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+
+        /* Make list items display horizontally */
+        & li {
+          display: inline-block;
+          margin-right: 10px; /* Adjust the right margin as needed */
+          color: $text;
+          margin-bottom: 15px;
+          font-family: $font-montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          font-feature-settings: 'clig' off, 'liga' off;
+          background-color: #E4E4E4;
+          //padding: 5px;
+          @include media-breakpoint-down(lg) {
+            margin-right: 15px;
+          }
+
+        }
+      }
+
+      /* Optional: To remove the bullet points if you're using nested lists */
+      ul li ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        /* Optional: Add margin between nested lists */
+        & li {
+          margin-right: 5px; /* Adjust the right margin as needed */
+        }
+      }
+    }
+
+    .search-box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 65px 0 15px 0;
+      position: relative;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+
+      &:after {
+        content: "\f002";
+        position: absolute;
+        right: 20px;
+        bottom: 25px;
+        font-family: $fontawesome;
+      }
+
+      .submit_search {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      label {
+        color: $text;
+        /* Button */
+        font-family: $font-montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+
+      input {
+        border: 1px solid #707070;
+        background: $white;
+        height: 45px;
+        width: 387px
+      }
+    }
+  }
+
+  .main-div {
+    display: flex;
+    margin-top: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: relative;
+    justify-content: flex-end;
+    @include media-breakpoint-down(lg) {
+      padding-left: 0;
+      position: relative;
+      left: 0;
+      padding-bottom: 20px;
+      gap: 20px;
+    }
+
+    .filter-btn {
+      position: absolute;
+      left: 25%;
+      border-radius: 100px;
+      background: #CA1237;
+      @include media-breakpoint-down(md) {
+        left: 32%;
+      }
+      @include media-breakpoint-down(sm) {
+        left: 42%;
+      }
+
+      .btn {
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+
+        .fa-filter {
+          padding-right: 15px;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    .switch {
+      position: absolute;
+      display: inline-block;
+      width: 140px;
+      height: 26px;
+      left: 40%;
+      top: 10px;
+      transform: translate(-58%, 0);
+      @include media-breakpoint-down(lg) {
+        left: 0;
+        transform: translate(0);
+        height: 30px;
+        top: 0;
+      }
+
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $red;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &:before {
+          position: absolute;
+          content: "";
+          height: 20px;
+          width: 20px;
+          left: 5px;
+          bottom: 3px;
+          background-color: $white;
+          -webkit-transition: .4s;
+          transition: .4s;
+          @include media-breakpoint-down(lg) {
+            bottom: 5px;
+          }
+        }
+
+        &.round {
+          border-radius: 34px;
+          color: $white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          font-family: $font-montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+
+          &:before {
+            border-radius: 50%;
+          }
+        }
+      }
+
+      input:checked + .slider {
+        background-color: $btn-grey2;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #CA1237;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+        transform: translateX(110px);
+      }
+
+      span {
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-cotnent: center;
+      }
+    }
+
+    .month {
+      color: $text;
+      font-family: $font-montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    .month-sort {
+      color: $text;
+      font-family: $font-montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      position: relative;
+      top: 20px;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+      //&:after {
+      //  font-family: $fontawesome;
+      //  content: "\f078";
+      //  text-align: center;
+      //  background-image: none;
+      //  border-radius: 50%;
+      //  color: $text;
+      //  position: absolute;
+      //  font-size: 0.825em;
+      //  padding-top: 3px;
+      //  height: 26px;
+      //  width: 26px;
+      //}
+    }
+  }
+
+  .monthsort-mobile {
+    display: none;
+    @include media-breakpoint-down(lg) {
+      display: block;
+      float: right;
+      color: $text;
+      font-family: $font-montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  .button {
+    display: flex;
+    gap: 20px;
+
+    .previous {
+      padding: 15px 17px;
+      font-family: $font-montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: $btn-grey2;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+
+      &:before {
+        content: "\f053";
+        background-repeat: no-repeat;
+        width: 6px;
+        height: 10px;
+        display: inline-block;
+        margin-right: 8px;
+        font-family: $fontawesome;
+      }
+    }
+
+    .next {
+      background: $red;
+      padding: 15px 23px;
+      font-family: $font-montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #ffffff;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+
+      &:after {
+        content: "\f054";
+        background-repeat: no-repeat;
+        width: 6px;
+        height: 10px;
+        display: inline-block;
+        margin-left: 8px;
+        font-family: $fontawesome;
+      }
+    }
+  }
+
+  .search-box-mobile {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 30px 0 30px 0;
+    position: relative;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    &:after {
+      content: "\f002";
+      position: absolute;
+      right: 16px;
+      bottom: 40px;
+      font-family: $fontawesome;
+    }
+
+    .submit_search {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      color: $text;
+      /* Button */
+      font-family: $font-montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    input {
+      border: 1px solid #707070;
+      background: $white;
+      height: 45px;
+      width: 100%;
+    }
+  }
+
+  .popup-container {
+    @include media-breakpoint-down(lg) {
+      display: none;
+      transition: max-height 0.5s ease-out;
+      overflow: hidden;
+      .taxonomy {
+        padding: 30px 0 0 0;
+
+        a {
+          cursor: pointer !important;
+
+          &:hover {
+            text-decoration: none !important;
+          }
+        }
+
+        h2 {
+          color: $text;
+          font-family: $font-montserrat;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          padding-bottom: 20px;
+          @include media-breakpoint-down(lg) {
+            padding-bottom: 5px;
+            font-size: 16px;
+          }
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        /* Make list items display horizontally */
+        ul li {
+          display: inline-block;
+          margin-right: 10px; /* Adjust the right margin as needed */
+          color: $text;
+          margin-bottom: 15px;
+          font-family: $font-montserrat;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          font-feature-settings: 'clig' off, 'liga' off;
+          background-color: #E4E4E4;
+          @include media-breakpoint-down(lg) {
+            margin-right: 15px;
+          }
+        }
+
+        /* Optional: To remove the bullet points if you're using nested lists */
+        ul li ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        /* Optional: Add margin between nested lists */
+        ul li ul li {
+          margin-right: 5px; /* Adjust the right margin as needed */
+        }
+      }
+      .tribe-events-header--has-event-search {
+        background: $red;
+        margin: 0 !important;
+        padding: 16px !important;
+
+        .tribe-events-c-top-bar__nav-list-item {
+          a {
+            font-weight: 900;
+            font-size: 17px;
+            line-height: 17px;
+
+            .tribe-common-c-svgicon--caret-left,
+            .tribe-common-c-svgicon--caret-right {
+              path {
+                fill: $white !important;
+              }
+            }
+          }
+        }
+
+        .tribe-events-c-top-bar__nav-list-date {
+          font-family: $font-montserrat;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          text-align: center;
+          text-transform: uppercase;
+          color: $white;
+        }
+      }
+
+      .tribe-events-calendar-month__header {
+        background: #dddddd;
+
+        .tribe-events-calendar-month__header-column {
+          padding-top: 10px;
+          padding-bottom: 13px !important;
+
+          .tribe-events-calendar-month__header-column-title {
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: $text;
+          }
+        }
+      }
+
+      .tribe-events-calendar-month__body {
+        padding: 0 2px;
+        background: #f6f6f6;
+
+        .tribe-events-calendar-month__day {
+          border: 3px solid #f6f6f6 !important;
+          border-radius: 0 !important;
+          background: $white;
+
+          .tribe-events-calendar-month__day-cell {
+            justify-content: center;
+            background-color: transparent !important;
+
+            h3 {
+              font-family: $font-montserrat;
+              font-style: normal;
+              font-weight: 400 !important;
+              font-size: 14px;
+              line-height: 17px;
+              text-align: center;
+              color: $text;
+            }
+
+            &:hover, &:focus, &:active {
+              background-color: transparent !important;
+            }
+          }
+        }
+
+        .tribe-events-calendar-month__day--past-month {
+          background: #f6f6f6 !important;
+
+          h3 {
+            color: #a3a3a3 !important;
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            // opacity: 100%!important;
+          }
+        }
+
+        .tribe-events-calendar-month__day--current {
+          .tribe-events-calendar-month__day-cell--selected {
+            background: none !important;
+          }
+        }
+
+        .tribe-events-calendar-month__mobile-events-icon {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 15px;
+          height: 15px;
+          border-radius: 0;
+          border-bottom: 15px solid #ca1237;
+          border-left: 15px solid transparent;
+          background: transparent;
+        }
+
+        .tribe-events-calendar-month__day--next-month {
+          background: #f6f6f6 !important;
+
+          h3 {
+            color: #a3a3a3 !important;
+            font-family: $font-montserrat;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+
+            time {
+              color: #a3a3a3 !important;
+            }
+          }
+        }
+      }
+      .tribe-events-calendar-month-mobile-events, .tribe-events-widget-events-month__view-more, .tribe-events-header__messages {
+        display: none;
+      }
+      .tribe-events-calendar-month__mobile-events-icon--event {
+        background-color: $white !important;
+        opacity: 1 !important;
+      }
+
+    }
+  }
+
+  .event-details-data {
+    display: flex;
+    margin: 55px 0 55px 0;
+
+    &.active_event {
+      border: 1px solid;
+      padding: 20px;
+      border-color: #ca1237;
+    }
+
+    .event-details-date {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 65px;
+      padding-bottom: 0;
+      padding-top: var(--tec-spacer-0);
+      text-align: center;
+      background: $red;
+      @include media-breakpoint-down(md) {
+        width: 55px;
+      }
+
+      .date {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 27.7073px;
+        line-height: 24px;
+        text-align: center;
+        color: $white;
+      }
+
+      .month {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11.1047px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: $white;
+        padding-bottom: 5px;
+      }
+
+      .weekday {
+        background: $text;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 12px;
+        text-align: center;
+        color: #b0b0b0;
+        padding: 2px 0;
+      }
+
+    }
+
+    .event-details-post {
+      padding-left: 50px;
+      width: 100%;
+      @include media-breakpoint-down(md) {
+        padding-left: 10px;
+      }
+
+      h4 {
+        border-bottom: 1px solid $btn-grey2;
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        color: $text;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        @include media-breakpoint-down(md) {
+          font-size: 16px;
+          line-height: 20px;
+          padding-bottom: 10px;
+        }
+
+        a {
+          border: none;
+
+          &:hover {
+            text-decoration: none !important;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    .event-category {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: 5px 0 5px 0;
+      flex-wrap: wrap;
+      @include media-breakpoint-down(lg) {
+        display: inline;
+      }
+
+      .event-cat {
+        display: flex;
+        gap: 5px;
+        margin-top: 5px;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 5px;
+        }
+
+        .category {
+          color: $btn-grey2;
+          font-family: Montserrat;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .circle {
+          content: '';
+          display: block;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: $red;
+
+          &.red {
+            background-color: $red;
+          }
+
+          &.blue {
+            background-color: #47A5BD;
+          }
+
+          &.yellow {
+            background-color: #ADA400;
+          }
+
+          &.orange {
+            background-color: #F08620;
+          }
+        }
+      }
+    }
+
+    .detail {
+      display: flex;;
+      gap: 5px;
+
+      p {
+        color: $btn-grey2;
+        font-family: Montserrat;
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 !important;
+        @include media-breakpoint-down(md) {
+          font-size: 12px !important;
+          line-height: 20px !important;
+        }
+      }
+
+      a {
+        color: $btn-grey2;
+      }
+
+    }
+
+    .post-content {
+      color: $text;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px; /* 157.143% */
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+  }
+
+  .dropdown {
+    border: none;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  .top-date {
+    display: flex;
+    gap: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $text;
+    border-bottom: 1px solid $btn-grey2;
+    padding-bottom: 10px;
+    @include media-breakpoint-down(lg) {
+      border-bottom: none;
+    }
+  }
+
+  .calender {
+    @include media-breakpoint-down(lg) {
+      margin-top: 5px;
+    }
+
+    .calender-header {
+      background: #CA1237;
+      margin: 0 !important;
+      padding: 16px !important;
+      display: flex;
+      justify-content: space-between;
+      height: 75px;
+      @include media-breakpoint-down(lg) {
+        height: 60px;
+      }
+
+      .month-date {
+        display: flex;
+        gap: 5px;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        padding-top: 3px;
+      }
+    }
+  }
+
+  li.active {
+    background: $black !important;
+
+    a {
+      color: $white !important;
+    }
+  }
+
+  .show.show-35 {
+    background: #F08620 !important;
+  }
+
+  .show.show-39 {
+    background: #F08620 !important;
+  }
+
+  .show.show-40 {
+    background: #F08620 !important;
+  }
+
+  .show.show-36 {
+    background: #47A5BD !important;
+  }
+
+  .show.show-37 {
+    background: #F3B81E !important;
+  }
+
+  .show.show-38 {
+    background: rgba(171, 162, 1, 0.50) !important;
+  }
+
+  .cat_cc_filter {
+    display: block;
+    padding: 5px;
+    margin: 0;
+
+    &[data-cat_id="40"] {
+      border-bottom: 2px solid #F08620 !important;
+    }
+
+    &[data-cat_id="39"] {
+      border-bottom: 2px solid #F08620 !important;
+    }
+
+    &[data-cat_id="38"] {
+      border-bottom: 2px solid rgba(171, 162, 1, 0.5) !important;
+    }
+
+    &[data-cat_id="37"] {
+      border-bottom: 2px solid #F3B81E !important;
+    }
+
+    &[data-cat_id="36"] {
+      border-bottom: 2px solid #47A5BD !important;
+    }
+
+    &[data-cat_id="35"] {
+      border-bottom: 2px solid #F08620 !important;
+    }
+  }
+
+  .reset {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+
+    .reset-filter {
+      width: 100%;
+      background: $black-60;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      &:hover {
+        background: $red;
+      }
+    }
+
+  }
+
+  .filter-mob {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-top: 40px;
+    padding-bottom: 20px;
+
+    .reset-btn.mob {
+      .reset-filter {
+        border-radius: 100px;
+        background: $black-60;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        &:hover {
+          background: $red;
+        }
+      }
+
+    }
+
+    .filter-button.mob {
+      border-radius: 100px;
+      background: $red;
+
+      .btn {
+        color: $white;
+        font-family: Font Awesome 5 Free;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+      }
+
+      .fa-filter {
+        padding-right: 15px;
+      }
+    }
+
+    .cross-btn {
+      padding-top: 5px;
+    }
+  }
+}
+
+.tribe-events-c-subscribe-dropdown__container {
+  display: none !important;
+}
+
+.widget_tribe-widget-events-month {
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+
+.the-calendar-events-page {
+  .left-content {
+    .right-content {
+      .tribe-events-calendar-month-mobile-events {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.tribe-common--breakpoint-medium.tribe-events {
+  .tribe-events-calendar-month-mobile-events {
+    display: none !important;
+    visibility: visible !important;
+  }
+}
+
+.tribe-common--breakpoint-medium.tribe-events {
+  .tribe-events-calendar-month-mobile-events {
+    display: block !important;
+    visibility: visible;
+  }
+}
